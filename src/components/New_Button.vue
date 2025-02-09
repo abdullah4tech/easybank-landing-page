@@ -10,5 +10,7 @@ const props = defineProps({
 
 
 <template>
-  <button class="py-3 px-8 rounded-full bg-linear-to-r/shorter from-lime-200 to-blue-300 font-bold text-white">{{ props.label }}</button>
+  <button class="bg-gradient-to-r from-green-400 to-blue-400 text-white font-bold text-[13px] px-6 py-3 rounded-full hover:shadow-lg transition-shadow duration-300 ease-in-out">
+    {{ props.label }}
+  </button>
 </template>
