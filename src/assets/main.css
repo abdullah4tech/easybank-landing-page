@@ -1,8 +1,6 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 body {
-  font-family: "Public Sans", sans-serif;
+  font-family: 'Public Sans', sans-serif;
   background-color: hsl(0, 0%, 98%);
 }
-
-

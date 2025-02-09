@@ -1,6 +1,6 @@
 <script setup>
-import New_Button from "@/components/New_Button.vue"
-import logo from "@/assets/logo.svg"
+import New_Button from '@/components/New_Button.vue'
+import logo from '@/assets/logo.svg'
 </script>
 
 <template>
