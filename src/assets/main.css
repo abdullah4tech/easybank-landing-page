@@ -1,31 +1,8 @@
-@import "tailwindcss"
+@import "tailwindcss";
 
-
-
-.dark-blue {
-  background-color: hsl(233, 26%, 24%);
-}
-
-.lime-green {
-  background-color: hsl(136, 65%, 51%);
-}
-
-.bright-cyan {
-  background-color: hsl(192, 70%, 51%);
-}
-
-.grayish-blue {
-  background-color: hsl(233, 8%, 62%);
-}
-
-.light-grayish-blue {
-  background-color: hsl(220, 16%, 96%);
-}
-
-.very-light-gray {
+body {
+  font-family: "Public Sans", sans-serif;
   background-color: hsl(0, 0%, 98%);
 }
 
-.white {
-  background-color: hsl(0, 0%, 100%);
-}
+
