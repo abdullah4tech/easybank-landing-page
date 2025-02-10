@@ -12,11 +12,6 @@ import imageCurrency from '@/assets/image-currency.jpg'
 import imgageRes from '@/assets/image-restaurant.jpg'
 import imagePlane from '@/assets/image-plane.jpg'
 import imageCon from '@/assets/image-confetti.jpg'
-import iconPin from '@/assets/icon-pinterest.svg'
-import iconTw from '@/assets/icon-twitter.svg'
-import iconYou from '@/assets/icon-youtube.svg'
-import iconFace from '@/assets/icon-facebook.svg'
-import iconInst from '@/assets/icon-instagram.svg'
 import logo from '@/assets/logo.svg'
 
 const articles = [
