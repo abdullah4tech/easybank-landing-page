@@ -2,6 +2,7 @@
 import NavBar from '@/components/NavBar.vue'
 import New_Button from '@/components/New_Button.vue'
 import bgHero from '@/assets/bg-intro-desktop.svg'
+import bgHeroMobile from '@/assets/bg-intro-mobile.svg'
 import bgMockup from '@/assets/image-mockups.png'
 import iconOnline from '@/assets/icon-online.svg'
 import iconBudgeting from '@/assets/icon-budgeting.svg'
@@ -59,57 +60,68 @@ const articles = [
   <main class="blue-text">
     <!-- Hero Section -->
     <section
-      class="flex flex-col lg:flex-row justify-between px-6 lg:px-24 bg-light-gray overflow-hidden h-[600px] relative"
-    >
-      <!-- Text Content -->
-      <div class="text-center py-32 lg:text-left max-w-lg lg:max-w-md">
-        <h1 class="text-6xl text-dark-blue leading-snug">
-          Next generation digital banking
-        </h1>
-        <p class="text-[18px] text-grayish-blue my-6 leading-relaxed">
-          Take your financial life online. Your Easybank account will be a one-stop-shop for
-          spending, saving, budgeting, investing, and much more.
+  class="flex flex-col-reverse lg:flex-row justify-between px-6 md:px-12 lg:px-24 bg-light-gray overflow-hidden min-h-[600px] relative"
+>
+  <!-- Text Content -->
+  <div class="text-center md:text-left max-w-lg mx-auto py-16 md:py-32">
+    <h1 class="text-3xl md:text-5xl lg:text-6xl text-dark-blue leading-snug">
+      Next generation digital banking
+    </h1>
+    <p class="text-[16px] md:text-[18px] text-grayish-blue my-6 leading-relaxed">
+      Take your financial life online. Your Easybank account will be a one-stop-shop for
+      spending, saving, budgeting, investing, and much more.
+    </p>
+    <New_Button label="Request Invite" class="mt-4" />
+  </div>
+
+  <!-- Mockup Image -->
+  <div class="relative flex justify-center lg:justify-end w-full lg:w-auto">
+    <bgHero class="hidden lg:block absolute -top-64 -right-[600px]" />
+    <bgHeroMobile class="absolute sm:block lg:hidden -top-36 -left-14 -right-40" />
+    <img
+      :src="bgMockup"
+      alt="Mobile Mockups"
+      class="relative top-14 md:top-36 lg:-top-[120px] lg:-right-56 max-w-full"
+      loading="lazy"
+    />
+  </div>
+</section>
+
+    <section class="md:px-6 grayish-blue flex flex-col gap-14 py-28">
+      <div class="flex flex-col items-center text-center gap-5 px-4 md:px-20">
+        <h2 class="md:text-5xl text-3xl text-dark-blue">Why choose Easybank?</h2>
+        <p class="text-grayish-blue text-[16px] leading-relaxed">
+          We leverage Open Banking to turn your bank account into your financial hub.
+          Control your finances like never before.
         </p>
-        <New_Button label="Request Invite" class="mt-4" />
       </div>
 
-      <!-- Mockup Image -->
-      <div class="relative w-full lg:w-auto">
-        <bgHero class="absolute -top-64 -right-[600px] hidden lg:block" />
-        <img :src="bgMockup" alt="Mobile Mockups" class="relative lg:-top-[120px] lg:-right-56" loading="lazy"/>
-      </div>
-    </section>
-    <section class="px-6 grayish-blue flex flex-col gap-14 py-28">
-      <div class="flex px-20 flex-col gap-5">
-        <h2 class="text-4xl">Why choose Easybank?</h2>
-        <p class="text-grayish-blue">We leverage Open Banking to turn your bank account into your financial hub. <br> Control your finances like never before.</p>
-      </div>
-      <div class="grid grid-cols-4 px-20 gap-9">
-        <div class="flex flex-col gap-8">
+      <div class="grid md:grid-cols-4 px-10 md:px-20 gap-9">
+        <div class="flex flex-col md:items-start md:justify-start items-center justify-center gap-8">
           <iconOnline />
           <h1 class="text-2xl">Online Banking</h1>
-          <p class="text-grayish-blue">Our modern web and mobile application allow you to keep track of your finances wherever you are in the world</p>
+          <p class="text-grayish-blue md:text-left text-center">Our modern web and mobile application allow you to keep track of your finances wherever you are in the world</p>
         </div>
-        <div class="flex flex-col gap-8">
+        <div class="flex flex-col md:items-start md:justify-start items-center justify-center gap-8">
           <iconBudgeting />
           <h1 class="text-2xl">Simple Budgeting</h1>
-          <p class="text-grayish-blue">See exactly where your money goes each month. Receive notifications when you're close to hitting your limits</p>
+          <p class="text-grayish-blue md:text-left text-center">See exactly where your money goes each month. Receive notifications when you're close to hitting your limits</p>
         </div>
-        <div class="flex flex-col gap-8">
+        <div class="flex flex-col md:items-start md:justify-start items-center justify-center gap-8">
           <iconOnboarding />
           <h1 class="text-2xl">Fast Onboarding</h1>
-          <p class="text-grayish-blue">We don't do branches. Open your account in minutes online and start taking control of your finances right way.</p>
+          <p class="text-grayish-blue md:text-left text-center">We don't do branches. Open your account in minutes online and start taking control of your finances right way.</p>
         </div>
-        <div class="flex flex-col gap-8">
+        <div class="flex flex-col md:items-start md:justify-start items-center justify-center gap-8">
           <iconApi />
           <h1 class="text-2xl">Open API</h1>
-          <p class="text-grayish-blue">Manage your savings, investments, pension, and much more from one account. Tracking your money has never been easier.</p>
+          <p class="text-grayish-blue md:text-left text-center">Manage your savings, investments, pension, and much more from one account. Tracking your money has never been easier.</p>
         </div>
       </div>
     </section>
-    <section class="px-24 py-16">
+    <section class="md:px-24 px-5 py-16">
       <h2 class="text-4xl py-12">Latest Articles</h2>
-      <div class="grid grid-cols-4 gap-7">
+      <div class="grid md:grid-cols-4 gap-7">
         <article class="bg-white rounded-2xl" v-for="(data, index) in articles" :key="index">
           <figure>
             <img class="w-full h-52 rounded-t" :src="data.image" loading="lazy">
